@@ -41,7 +41,7 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov
-        pytest tests/ --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-
+        pytest tests/ --doctest-modules --junitxml=junit/test-results.xml --cov=com
           
   build:
     name: Build distribution 📦

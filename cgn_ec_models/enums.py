@@ -12,3 +12,16 @@ class NATEventTypeEnum(int, Enum):
     CREATED = 1
     DELETED = 2
     UPDATED = 3
+
+
+class NATProtocolEnum(str, Enum):
+    ICMP = 1
+    TCP = 6
+    UDP = 17
+
+    @classmethod
+    def from_string(cls, name: str):
+        try:
+            return cls[name.upper()].value
+        except KeyError:
+            raise ValueError(f"Invalid protocol name: {name}")
