@@ -9,7 +9,6 @@ from sqlmodel import (
     SmallInteger,
     Integer,
 )
-from pydantic import field_validator
 from sqlalchemy.dialects.postgresql import INET
 from cgn_ec_models.enums import NATEventTypeEnum
 
