@@ -1,6 +1,7 @@
 from datetime import datetime
 from ipaddress import IPv4Address, IPv6Address
 
+from pydantic import ConfigDict
 from sqlmodel import (
     SQLModel,
     PrimaryKeyConstraint,
@@ -10,10 +11,12 @@ from sqlmodel import (
     Integer,
 )
 from sqlalchemy.dialects.postgresql import INET
+
 from cgn_ec_models.enums import NATEventTypeEnum
 
 
 class MetricBase(SQLModel):
+    model_config = ConfigDict(use_enum_values=True)
     timestamp: datetime
 
 
