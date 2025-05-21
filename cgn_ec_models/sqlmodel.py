@@ -32,9 +32,7 @@ class NATSessionMapping(MetricBase, table=True):
 
     host: IPv4Address | IPv6Address = Field(sa_column=Column(INET))
     event: NATEventTypeEnum = Field(sa_column=Column(Integer))
-    vrf_id: str | None = Field(
-        default=None, sa_column=Column(VARCHAR, nullable=True)
-    )
+    vrf_id: str | None = Field(default=None, sa_column=Column(VARCHAR, nullable=True))
     protocol: int = Field(sa_column=Column(SmallInteger))
     src_ip: IPv4Address = Field(sa_column=Column(INET))
     src_port: int = Field(sa_column=Column(Integer))
@@ -53,9 +51,7 @@ class NATAddressMapping(MetricBase, table=True):
 
     host: IPv4Address | IPv6Address = Field(sa_column=Column(INET))
     event: NATEventTypeEnum = Field(sa_column=Column(SmallInteger))
-    vrf_id: str | None = Field(
-        default=None, sa_column=Column(VARCHAR, nullable=True)
-    )
+    vrf_id: str | None = Field(default=None, sa_column=Column(VARCHAR, nullable=True))
     src_ip: IPv4Address = Field(sa_column=Column(INET))
     x_ip: IPv4Address = Field(sa_column=Column(INET))
 
@@ -78,9 +74,7 @@ class NATPortMapping(MetricBase, table=True):
 
     host: IPv4Address | IPv6Address = Field(sa_column=Column(INET))
     event: NATEventTypeEnum = Field(sa_column=Column(SmallInteger))
-    vrf_id: str | None = Field(
-        default=None, sa_column=Column(VARCHAR, nullable=True)
-    )
+    vrf_id: str | None = Field(default=None, sa_column=Column(VARCHAR, nullable=True))
     protocol: int = Field(sa_column=Column(SmallInteger))
     src_ip: IPv4Address = Field(sa_column=Column(INET))
     src_port: int = Field(sa_column=Column(Integer))
@@ -105,9 +99,7 @@ class NATPortBlockMapping(MetricBase, table=True):
 
     host: IPv4Address | IPv6Address = Field(sa_column=Column(INET))
     event: NATEventTypeEnum = Field(sa_column=Column(SmallInteger))
-    vrf_id: str | None = Field(
-        default=None, sa_column=Column(VARCHAR, nullable=True)
-    )
+    vrf_id: str | None = Field(default=None, sa_column=Column(VARCHAR, nullable=True))
     src_ip: IPv4Address = Field(sa_column=Column(INET))
     x_ip: IPv4Address = Field(sa_column=Column(INET))
     start_port: int = Field(sa_column=Column(Integer))
