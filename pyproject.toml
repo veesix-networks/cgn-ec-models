@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cgn-ec-models"
-version = "0.2.0"
+version = "0.3.0"
 description = "Models for cgn-ec"
 authors = ["BSpendlove <8687668+BSpendlove@users.noreply.github.com>"]
 readme = "README.md"
